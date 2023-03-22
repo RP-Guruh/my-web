@@ -15,12 +15,12 @@ export default defineNuxtConfig({
     },
   
     css: [
-      // "vuetify/styles/main.sass",
-      // "@mdi/font/css/materialdesignicons.css",
+      "vuetify/styles/main.sass",
+      "@mdi/font/css/materialdesignicons.css",
       "@/assets/css/main.css",
     ],
-    // build: {
-    //   transpile: ["vuetify"],
-    // },
+    build: {
+      transpile: ["vuetify"],
+    },
     modules: ["@nuxtjs/tailwindcss"],
   });
