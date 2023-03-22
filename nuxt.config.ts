@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     },
   
     css: [
-      "vuetify/styles/main.sass",
+      "vuetify/lib/styles/main.sass",
       "@mdi/font/css/materialdesignicons.css",
       "@/assets/css/main.css",
     ],
@@ -23,4 +23,9 @@ export default defineNuxtConfig({
       transpile: ["vuetify"],
     },
     modules: ["@nuxtjs/tailwindcss"],
+    vite: {
+      define: {
+          'process.env.DEBUG': false,
+      },
+    },
   });
