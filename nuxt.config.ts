@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     css: [
       "@mdi/font/css/materialdesignicons.css",
       "@/assets/css/main.css",
-      "vuetify/lib/styles/main.sass"
+      "vuetify/styles/main.sass"
     ],
    
     modules: ["@nuxtjs/tailwindcss"],

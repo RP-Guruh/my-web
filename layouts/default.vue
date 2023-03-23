@@ -1,5 +1,7 @@
 <template>
-    <div>
+  <div class="mainColor mobile-view min-h-screen mx-auto">
+    <v-layout>
       <slot />
-    </div>
-  </template>
+    </v-layout>
+  </div>
+</template>
