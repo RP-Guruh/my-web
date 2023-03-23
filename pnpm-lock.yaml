@@ -5,11 +5,13 @@ specifiers:
   '@nuxtjs/tailwindcss': ^6.6.4
   nuxt: ^3.3.1
   sass: ^1.59.3
+  vuetify: ^3.1.11
 
 dependencies:
   '@mdi/font': 7.2.96
   '@nuxtjs/tailwindcss': 6.6.4
   sass: 1.59.3
+  vuetify: 3.1.11
 
 devDependencies:
   nuxt: 3.3.1_sass@1.59.3
@@ -5380,6 +5382,23 @@ packages:
       '@vue/server-renderer': 3.2.47_vue@3.2.47
       '@vue/shared': 3.2.47
     dev: true
+
+  /vuetify/3.1.11:
+    resolution: {integrity: sha512-EAR/7vdYY0jCYW+sn9owl6CC5QsWFw100KJnK0ahdHnFj9B93PR5xetekge8BsEWx6bSnsRIOdPyvud+p29wow==}
+    engines: {node: ^12.20 || >=14.13}
+    peerDependencies:
+      vite-plugin-vuetify: ^1.0.0-alpha.12
+      vue: ^3.2.0
+      vue-i18n: ^9.0.0
+      webpack-plugin-vuetify: ^2.0.0-alpha.11
+    peerDependenciesMeta:
+      vite-plugin-vuetify:
+        optional: true
+      vue-i18n:
+        optional: true
+      webpack-plugin-vuetify:
+        optional: true
+    dev: false
 
   /wcwidth/1.0.1:
     resolution: {integrity: sha512-XHPEwS0q6TaxcvG85+8EYkbiCux2XtWG2mkc47Ng2A77BQu9+DqIOJldST4HgPkuea7dvKSj5VgX3P1d4rW8Tg==}

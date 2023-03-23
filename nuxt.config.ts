@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
     app: {
       head: {
         title: "Guruh Web",
@@ -17,8 +16,11 @@ export default defineNuxtConfig({
     css: [
       "@mdi/font/css/materialdesignicons.css",
       "@/assets/css/main.css",
+      "vuetify/lib/styles/main.sass"
     ],
    
     modules: ["@nuxtjs/tailwindcss"],
-   
+    build: {
+      transpile: ["vuetify"],
+    },
   });
