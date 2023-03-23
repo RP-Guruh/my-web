@@ -25,6 +25,7 @@
 
 <style scoped>
 .btn {
+    
     border: 3px solid black;
     padding: 10px;
     margin: 30px;

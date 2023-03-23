@@ -2,7 +2,9 @@
 
 @font-face {
   font-family: "Segoe UI";
+  font-family: "3D";
   src: url("~/assets/Segoe_UI.ttf") format("truetype");
+  src: url("~/assets/3D.ttf") format("truetype");
 }
 
 @media (min-width: 720px) {

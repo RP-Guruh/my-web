@@ -1,6 +1,6 @@
 <template>
     <div class="container text-center mt-8">
-        <span class="font-extrabold text-2xl">
+        <span class="font-extrabold text-5xl">
             Hi, I'm a
             <span class="typed-text font-bold">{{ typeValue }}</span>
             <span class="blinking-cursor">|</span>
@@ -66,7 +66,7 @@ export default {
 <style lang="scss" scoped>
 
 span {
-    font-family: "Segoe UI", sans-serif;
+    font-family: "3D", sans-serif;
     span.typed-text {
         color: #d2b94b;
     }
