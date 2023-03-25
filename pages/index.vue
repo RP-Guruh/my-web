@@ -8,21 +8,23 @@
         <!-- Perkenalan -->
         <IntroComponent></IntroComponent>
 
-        <div class="flex justify-center items-center mt-10">
+        <div class="flex justify-center items-center mt-4">
             <button type="button" class="w-40 btn text-slate-700 font-bold">Pendidikan</button>
         </div>
 
-        <div class="flex justify-center items-center mt-4">
+        <div class="flex justify-center items-center mt-2">
             <button type="button" class="w-40 btn text-slate-700 font-bold">Keahlian</button>
         </div>
 
-        <div class="flex justify-center items-center mt-4">
+        <div class="flex justify-center items-center mt-2">
             <button type="button" class="w-40 btn text-slate-700 font-bold">Kontak Saya</button>
         </div>
 
-        <div class="flex justify-center items-center mt-4">
+        <div class="flex justify-center items-center mt-2">
             <button type="button" class="w-40 btn text-slate-700 font-bold">Blog</button>
         </div>
+        
+        <ChangeMode></ChangeMode>
         
     </div>
 </template>

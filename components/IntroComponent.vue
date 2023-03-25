@@ -66,10 +66,8 @@ export default {
 <style lang="scss" scoped>
 
 span {
-    font-family: "3D", sans-serif;
-    span.typed-text {
-        color: #d2b94b;
-    }
+    font-family: "VP Pixel Simplified", sans-serif;
+ 
 }
 
 // Cursor blinking CSS Starts...

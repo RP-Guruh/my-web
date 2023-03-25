@@ -10,14 +10,20 @@ export default defineNuxtConfig({
             content: "width=device-width, initial-scale=1, user-scalable=no",
           },
         ],
+        link: [
+          {
+            rel: 'stylesheet',
+            href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css'
+          }
+        ],
       },
     },
   
     css: [
       "@mdi/font/css/materialdesignicons.css",
       "@/assets/css/main.css",
-      "@/assets/css/button3D.css",
+      "@/assets/css/button3D.css"
     ],
    
-    modules: ["@nuxtjs/tailwindcss"],
+    modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode"],
   });

@@ -2,9 +2,10 @@
 
 @font-face {
   font-family: "Segoe UI";
-  font-family: "3D";
+  font-family: "VP Pixel Simplified";
   src: url("~/assets/Segoe_UI.ttf") format("truetype");
-  src: url("~/assets/3D.ttf") format("truetype");
+  src: url("~/assets/VPPixel-Simplified.otf") format("opentype");
+
 }
 
 @media (min-width: 720px) {
@@ -13,6 +14,3 @@
     }
 }
 
-.mainColor {
-  background-color: #fff9f9;
-}
