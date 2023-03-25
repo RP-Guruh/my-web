@@ -1,13 +1,27 @@
 <template>
     <div class="flex justify-center items-center mt-2">
-        <input type="checkbox" class="checkbox" id="checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox" v-model="$colorMode.preference" value="dark">
         <label for="checkbox" class="checkbox-label">
             <i class="fas fa-moon"></i>
             <i class="fas fa-sun"></i>
             <span class="ball"></span>
         </label>
-    </div>
+    </div>  
+
+    <select v-model="$colorMode.preference">
+      <option value="system">System</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+      <option value="sepia">Sepia</option>
+    </select>
 </template>
+
+
+
+<script setup>
+const colorMode = useColorMode()
+console.log(colorMode.preference)
+</script>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
@@ -29,15 +43,9 @@ body {
     transition: background 0.2s linear;
 }
 
-body.dark {
-    background-color: #292c35;
-}
-
-/* #9b59b6 */
-
-body.dark h1,
-body.dark .support a {
-    color: #fff;
+.dark-mode body {
+  background-color: #091a28;
+  color: #ebf4f1;
 }
 
 .checkbox {

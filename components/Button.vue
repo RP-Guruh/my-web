@@ -18,7 +18,7 @@ const props = defineProps({
     
     border: 3px solid black;
     padding: 10px;
-    margin: 30px;
+    margin: 17px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 3px -3px black;

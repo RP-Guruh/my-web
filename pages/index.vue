@@ -8,7 +8,7 @@
         <!-- Perkenalan -->
         <IntroComponent></IntroComponent>
 
-        <div v-for="item in valueButton">
+        <div v-for="item in valueButton" class="mt-4"> 
             <Button :title="item"></Button>
         </div>
        

@@ -1,7 +1,7 @@
 <template>
     <div class="container text-center mt-8">
         <span class="font-extrabold text-3xl">
-            Hi, I'm a
+            Hi,
             <span class="typed-text font-bold">{{ typeValue }}</span>
             <span class="blinking-cursor">|</span>
             <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
@@ -15,7 +15,7 @@ export default {
         return {
             typeValue: "",
             typeStatus: false,
-            displayTextArray: ["Web Programmer", "Freelancer", "Coffee Lover"],
+            displayTextArray: ["Guruh is here","i'm a web programmer", "i'm a freelancer", "i'm a coffee lover"],
             typingSpeed: 100,
             erasingSpeed: 100,
             newTextDelay: 2000,
