@@ -18,11 +18,18 @@ export default defineNuxtConfig({
         ],
       },
     },
+
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    },
   
     css: [
-      "@mdi/font/css/materialdesignicons.css",
-      "@/assets/css/main.css"
+      "@/assets/css/main.css",
+      "@/assets/css/global.css"
     ],
    
-    modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode"],
+    modules: ["@nuxtjs/color-mode"],
   });

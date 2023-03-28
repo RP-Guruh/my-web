@@ -1,109 +1,33 @@
 <template>
-    <div class="flex justify-center items-center mt-2">
-        <input type="checkbox" class="checkbox" id="checkbox" v-model="$colorMode.preference" value="dark">
-        <label for="checkbox" class="checkbox-label">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-            <span class="ball"></span>
-        </label>
-    </div>  
-
-    <select v-model="$colorMode.preference">
-      <option value="system">System</option>
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
-      <option value="sepia">Sepia</option>
-    </select>
+    <div class="flex justify-center items-center">
+        <div>
+            <Switch v-model="enabled" v-if="enabled !== null" @click="toggleTheme"
+                :class="enabled ? 'bg-black' : 'bg-orange-50'"
+                class="relative inline-flex h-[38px] w-[74px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+                <span class="sr-only">Mode setting</span>
+                <span aria-hidden="true" :class="enabled ? 'translate-x-9' : 'translate-x-0'"
+                    class="pointer-events-none inline-block transform shadow-lg ring-0 transition duration-200 ease-in-out">
+                    <MoonIcon v-if="enabled" class="h-[34px] w-[34px] fill-gray-300" />
+                    <SunIcon v-else class="h-[34px] w-[34px] fill-yellow-500" />
+                </span>
+            </Switch>
+        </div>
+    </div>
 </template>
 
+<script setup lang="ts">
+import { Switch } from "@headlessui/vue"
+import { SunIcon, MoonIcon } from "@heroicons/vue/24/solid"
 
+useHead({
+    script: [{
+        children: `if (localStorage.theme === "dark" || (!('theme' in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.documentElement.setAttribute("data-theme", "dark")
+    } else {
+      document.documentElement.removeAttribute("data-theme")
+    }`}]
+})
 
-<script setup>
-const colorMode = useColorMode()
-console.log(colorMode.preference)
+const { enabled, toggleTheme } = useTheme()
+
 </script>
-
-<style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Montserrat", sans-serif;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    min-height: 100vh;
-    margin: 0;
-    transition: background 0.2s linear;
-}
-
-.dark-mode body {
-  background-color: #091a28;
-  color: #ebf4f1;
-}
-
-.checkbox {
-    opacity: 0;
-    position: absolute;
-}
-
-.checkbox-label {
-    background-color: #111;
-    width: 50px;
-    height: 26px;
-    border-radius: 50px;
-    position: relative;
-    padding: 5px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.fa-moon {
-    color: #f1c40f;
-}
-
-.fa-sun {
-    color: #f39c12;
-}
-
-.checkbox-label .ball {
-    background-color: #fff;
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    border-radius: 50%;
-    transition: transform 0.2s linear;
-}
-
-.checkbox:checked+.checkbox-label .ball {
-    transform: translateX(24px);
-}
-
-/*  Support me if you like it */
-.support {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-}
-
-.support a {
-    color: #292c35;
-    font-size: 32px;
-    backface-visibility: hidden;
-    display: inline-block;
-    transition: transform 0.2s ease;
-}
-
-.support a:hover {
-    transform: scale(1.1);
-}</style>

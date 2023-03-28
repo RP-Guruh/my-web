@@ -1,16 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-
-@font-face {
-  font-family: "Segoe UI";
-  font-family: "VP Pixel Simplified";
-  src: url("~/assets/Segoe_UI.ttf") format("truetype");
-  src: url("~/assets/VPPixel-Simplified.otf") format("opentype");
-
-}
-
-@media (min-width: 720px) {
-    .mobile-view {
-      max-width: 50%;
-    }
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 

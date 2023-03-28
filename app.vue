@@ -1,12 +1,5 @@
 <template>
-  <div class="mainColor mobile-view min-h-screen mx-auto">
+  <div class="mainColor mobile-view min-h-screen mx-auto dark:bg-bgDark dark:text-textDark">
     <NuxtPage></NuxtPage>
   </div>
 </template>
-
-<style>
-.dark-mode body {
-  background-color: #091a28;
-  color: #ebf4f1;
-}
-</style>

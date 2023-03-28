@@ -15,7 +15,7 @@ const props = defineProps({
 
 <style scoped>
 .btn {
-    
+    font-family: "VP Pixel Simplified", sans-serif;
     border: 3px solid black;
     padding: 10px;
     margin: 17px;
