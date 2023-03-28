@@ -8,7 +8,7 @@
                 <span aria-hidden="true" :class="enabled ? 'translate-x-9' : 'translate-x-0'"
                     class="pointer-events-none inline-block transform shadow-lg ring-0 transition duration-200 ease-in-out">
                     <MoonIcon v-if="enabled" class="h-[34px] w-[34px] fill-gray-300" />
-                    <SunIcon v-else class="h-[34px] w-[34px] " />
+                    <SunIcon v-else class="h-[34px] w-[34px] fill-yellow-500" />
                 </span>
             </Switch>
         </div>
